@@ -7,7 +7,7 @@ npm path = require('path');
 var app = express();
 
 //Define port
-var PORT = 8080;
+var PORT = process.env.PORT || 8080;
 
 //Interpret express data with body-parser package
 app.use(bodyParser.json());
