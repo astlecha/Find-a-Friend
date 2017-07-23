@@ -160,6 +160,29 @@
 
     </div>
 
+<script type="text/javascript">
+	$('#submit').on('click', function(){
+
+		function validate(){
+			var formValid=true;
+			//Check to see if first input box is empty
+			$('form-control').each(function(){
+				if($(this).val==='') 
+					formValid=false;
+			});
+
+			//Check to see if any dropdowns are empty
+			$('chosen-select').each(function(){
+				if($(this).val==='') 
+					formValid=false;
+			})
+
+			return formValid;
+		}
+	})
+
+</script>
+
 
 </body>
 </html>
