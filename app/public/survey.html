@@ -186,6 +186,7 @@
 
 		//Put user data into object
 		if (validate()===true){
+
 			var userProfile = {
 				name: $('#name').val(),
 				photo: $('#photo').val(),
@@ -206,14 +207,15 @@
 			//Grab the url to post data to API
 			var currentUrl=window.location.origin
 			//Post to API
-			// $.post(currentUrl+'api/friends', userProfile, function(data){
-				// $('#matchName').text(data.name);
-				// $('#matchPhoto').attr('src', data.photo);
-			// });
+			$.post(currentUrl+'api/friends', userProfile, function(data){
+				console.log(data);
+				alert('Matching you...')
+				$('#matchName').text(data.name);
+				$('#matchPhoto').attr('src', data.photo);
 
-			// 	//Show popup with match results
-			// 	$('#resultsModal').model('toggle');
-			// });
+				//Show popup with match results
+				$('#resultsModal').model('toggle');
+			});
 
 			//Clear form on submission
 			$('#name').val(''),
