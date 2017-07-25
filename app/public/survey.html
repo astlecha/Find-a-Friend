@@ -197,12 +197,39 @@
 			      $('q9').val(),
 			      $('q10').val()
 			    ]
-			}
+			};
+
+			// //Grab the url to post data to API
+			// var currentUrl=window.location.origin
+			// //Post to API
+			// $.post(currentUrl+'api/friends', userProfile, function(data){
+			// 	$('#matchName').text(data.name);
+			// 	$('#matchPhoto').attr('src', data.photo);
+
+			// 	//Show popup with match results
+			// 	$('#resultsModal').model('toggle');
+			// });
+
+			//Clear form on submission
+			$('#name').val(''),
+			$('#photo').val(''),
+			$('q1').val(''),
+			$('q2').val(''),
+			$('q3').val(''),
+			$('q4').val(''),
+			$('q5').val(''),
+			$('q6').val(''),
+			$('q7').val(''),
+			$('q8').val(''),
+			$('q9').val(''),
+			$('q10').val('')
 		}
 
 		else{
-			alert('You left one or more answers blank.')
+			alert('You left one or more answers blank.');
 		}
+
+		return false;
 	});
 
 </script>

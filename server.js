@@ -1,7 +1,7 @@
 //Require basic npm packages
-npm express = require('express');
-npm bodyParser = require('body-parser');
-npm path = require('path');
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
 
 //Configure server
 var app = express();

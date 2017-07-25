@@ -1,5 +1,5 @@
-//Load table data from friends.js
-var friendsData = require('../data/friends');
+//Load table data array from friends.js
+var friendsData = require('../data/friends.js');
 
 //Route
 module.exports = function(app){
@@ -9,8 +9,7 @@ module.exports = function(app){
 	});
 
 	//Set up API post request for new user's data
-	app.post('api/friends', function(req,res){
-		// friendsData.push(req.body);
-		res.json(friendsData);
+	app.post('/api/friends', function(req,res){
+		friendsData.push(req.body);
 	});
 };
