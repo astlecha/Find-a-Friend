@@ -24,7 +24,7 @@ module.exports = function(app){
 		var bestMatch = {
 			name: '',
 			photo: '',
-			matchDifference: 0;
+			matchDifference: 20000;
 		}
 		
 		//Loop through each friend object to get each scores array
@@ -33,10 +33,19 @@ module.exports = function(app){
 
 			//Loop through 10 diff scores
 			for (var t = 0; t < 10; t++) {
-				totalDifference +=
+				//Subtract friend score total from user score total
+				//Convert to positive number with absolute value: Math.abs
+				totalDifference += Math.abs(parseInt(userScores[t])-parseInt(friendsData[i].scores[t]));
+				
+				//If difference between this friend & user < previous best match total...
+				if(totalDifference <= bestMatch.matchDifference){
+					//Update best match with this friend's data
+					bestMatch.name = friendsData[i].name;
+					bestMatch.photo = friendsData[i].photo;
+					bestMatch.matchDifference = totalDifference;
+				}
 			}
-
-		}
+		};
 			
 		friendsData.push(info);
 
