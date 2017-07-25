@@ -1,34 +1,12 @@
 var friends = [
 	{	
-		'name': 'Josh',
-		'photo': 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
-		'scores':[
-		      5,
-		      1,
-		      4,
-		      4,
-		      5,
-		      1,
-		      2,
-		      5,
-		      4,
-		      1
-		    ]
+		name: 'Josh',
+		photo: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
+		scores:[5,1,4,4,5,1,2,5,4,1]
 	}, {
-		'name': 'Alice',
-		'photo': 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
-		'scores':[
-		      3,
-		      3,
-		      4,
-		      4,
-		      1,
-		      3,
-		      5,
-		      4,
-		      5,
-		      2
-		    ]
+		name: 'Alice',
+		photo: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg',
+		scores:[3,3,4,4,1,3,5,4,5,2]
 	}
 ];
 
