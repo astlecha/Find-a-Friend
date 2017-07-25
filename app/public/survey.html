@@ -37,15 +37,6 @@
 				<option value="4">4</option>
 				<option value="5">5 (Strongly Agree)</option>
 			</select>
-			<!-- <div class="chosen-container chosen-container-single" style="width: 155px;" title_id="q1_chosen">
-				<a class="chosen-single chosen-default">
-					<span>Select an option</span><div><b></b></div>
-				</a>
-				<div class="chosen-drop">
-					<div class="chosen-search"><input type="text" autocomplete="off"></div>
-					<ul class="chosen-results"></ul>
-				</div>
-			</div> -->
 
 		<h3>Question 2</h3>
 		<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
@@ -150,8 +141,21 @@
 		<br>
 		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
 
+		<!-- Pop up with match result -->
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content" id="resultsModal">
+		      <!-- Match result name goes here: -->
+		      <p id="matchName"></p>
+		      <!-- Match result photo goes here: -->
+		      <img id="matchPhoto">
+		    </div>
+		  </div>
+		</div>
+
 		<hr>
 
+		<!-- Footer with links to API and GitHub Repo -->
 	 	<footer class="footer">
 	      <div class="container">
 	        <a href="/api/friends">View all Potential Friends</a> | <a href="https://github.com/astlecha/Find-a-Friend">GitHub Repo</a></p>
@@ -199,12 +203,13 @@
 			    ]
 			};
 
-			// //Grab the url to post data to API
-			// var currentUrl=window.location.origin
-			// //Post to API
+			//Grab the url to post data to API
+			var currentUrl=window.location.origin
+			//Post to API
 			// $.post(currentUrl+'api/friends', userProfile, function(data){
-			// 	$('#matchName').text(data.name);
-			// 	$('#matchPhoto').attr('src', data.photo);
+				// $('#matchName').text(data.name);
+				// $('#matchPhoto').attr('src', data.photo);
+			// });
 
 			// 	//Show popup with match results
 			// 	$('#resultsModal').model('toggle');
