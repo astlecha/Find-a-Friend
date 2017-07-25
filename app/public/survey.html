@@ -207,11 +207,11 @@
 			//Grab the url to post data to API
 			var currentUrl=window.location.origin
 			//Post to API
-			$.post(currentUrl+'api/friends', userProfile, function(data){
-				console.log(data);
+			$.post(currentUrl+'api/friends', userProfile, function(bestMatch){
+				console.log(bestMatch);
 				alert('Matching you...')
-				$('#matchName').text(data.name);
-				$('#matchPhoto').attr('src', data.photo);
+				$('#matchName').text(bestMatch.name);
+				$('#matchPhoto').attr('src', bestMatch.photo);
 
 				//Show popup with match results
 				$('#resultsModal').model('toggle');

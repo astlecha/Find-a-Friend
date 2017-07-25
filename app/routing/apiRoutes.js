@@ -46,9 +46,11 @@ module.exports = function(app){
 				}
 			}
 		};
-			
+		
+		//Push new user req.body into friends array
 		friendsData.push(info);
 
-
+		//Send best match as res
+		res.json(bestMatch);
 	});
 };
