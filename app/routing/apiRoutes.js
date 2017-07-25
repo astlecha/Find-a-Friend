@@ -24,7 +24,7 @@ module.exports = function(app){
 		var bestMatch = {
 			name: '',
 			photo: '',
-			matchDifference: 20000;
+			matchDifference: 20000
 		}
 		
 		//Loop through each friend object to get each scores array
